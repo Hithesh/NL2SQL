@@ -1,0 +1,38 @@
+version: '3.7'
+
+services:
+  # Backend Service (FastAPI with Qdrant)
+  backend:
+    build:
+      context: ./backend  # Change this if your backend is in a different directory
+    ports:
+      - "8000:8000"  # Exposes port 8000 for FastAPI backend
+    environment:
+      - QDRANT_URL=http://qdrant:6333  # Qdrant service URL for the backend
+    volumes:
+      - ./backend:/app
+    depends_on:
+      - qdrant  # Wait for Qdrant service to be ready before starting the backend
+
+  # Qdrant Service (Vector Database)
+  qdrant:
+    image: qdrant/qdrant:latest  # Using the latest version of Qdrant image
+    ports:
+      - "6333:6333"  # Exposes port 6333 for the Qdrant database
+    environment:
+      - QDRANT__SERVICE__GRPC_PORT=6334  # Configuring gRPC port if needed
+
+  # Frontend Service (React)
+  frontend:
+    build:
+      context: ./frontend  # Change this if your frontend is in a different directory
+    ports:
+      - "3000:80"  # Exposes port 3000 for React app, internally served by Nginx
+    volumes:
+      - ./frontend:/app
+    depends_on:
+      - backend  # Ensures backend is ready before frontend starts
+
+networks:
+  default:
+    driver: bridge

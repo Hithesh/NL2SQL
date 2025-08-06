@@ -1,0 +1,123 @@
+[
+    {
+      "table_name": "customers",
+      "columns": ["customer_id", "first_name", "last_name", "email", "phone", "address", "dob", "membership_level"]
+    },
+    {
+      "table_name": "orders",
+      "columns": ["order_id", "customer_id", "order_date", "total_amount", "status", "payment_method"]
+    },
+    {
+      "table_name": "products",
+      "columns": ["product_id", "product_name", "category", "price", "stock_quantity", "supplier_id"]
+    },
+    {
+      "table_name": "transactions",
+      "columns": ["transaction_id", "customer_id", "order_id", "transaction_date", "amount", "transaction_status"]
+    },
+    {
+      "table_name": "employees",
+      "columns": ["employee_id", "first_name", "last_name", "job_title", "department", "salary", "hire_date"]
+    },
+    {
+      "table_name": "departments",
+      "columns": ["department_id", "department_name", "manager_id", "location"]
+    },
+    {
+      "table_name": "suppliers",
+      "columns": ["supplier_id", "supplier_name", "contact_name", "contact_email", "contact_phone", "address"]
+    },
+    {
+      "table_name": "reviews",
+      "columns": ["review_id", "product_id", "customer_id", "rating", "review_date", "review_text"]
+    },
+    {
+      "table_name": "shipping_addresses",
+      "columns": ["address_id", "customer_id", "street_address", "city", "state", "postal_code", "country"]
+    },
+    {
+      "table_name": "inventory",
+      "columns": ["inventory_id", "product_id", "warehouse_location", "quantity_in_stock", "reorder_level"]
+    },
+    {
+      "table_name": "payment_methods",
+      "columns": ["payment_method_id", "payment_type", "description"]
+    },
+    {
+      "table_name": "coupons",
+      "columns": ["coupon_id", "coupon_code", "discount_percentage", "valid_from", "valid_until"]
+    },
+    {
+      "table_name": "product_categories",
+      "columns": ["category_id", "category_name", "category_description"]
+    },
+    {
+      "table_name": "product_images",
+      "columns": ["image_id", "product_id", "image_url", "alt_text"]
+    },
+    {
+      "table_name": "wishlists",
+      "columns": ["wishlist_id", "customer_id", "product_ids", "created_date"]
+    },
+    {
+      "table_name": "orders_history",
+      "columns": ["order_id", "order_status", "total_price", "payment_status", "shipping_date"]
+    },
+    {
+      "table_name": "promotions",
+      "columns": ["promotion_id", "promotion_code", "description", "discount_percentage", "start_date", "end_date"]
+    },
+    {
+      "table_name": "customer_support_tickets",
+      "columns": ["ticket_id", "customer_id", "issue_type", "created_at", "status", "assigned_to"]
+    },
+    {
+      "table_name": "returns",
+      "columns": ["return_id", "order_id", "product_id", "return_reason", "return_status", "return_date"]
+    },
+    {
+      "table_name": "subscriptions",
+      "columns": ["subscription_id", "customer_id", "subscription_plan", "start_date", "end_date", "renewal_date"]
+    },
+    {
+      "table_name": "discounts",
+      "columns": ["discount_id", "product_id", "discount_percentage", "valid_from", "valid_until"]
+    },
+    {
+      "table_name": "banners",
+      "columns": ["banner_id", "banner_name", "banner_image_url", "banner_url", "start_date", "end_date"]
+    },
+    {
+      "table_name": "ratings",
+      "columns": ["rating_id", "customer_id", "product_id", "rating", "review"]
+    },
+    {
+      "table_name": "blog_posts",
+      "columns": ["post_id", "author_id", "title", "content", "post_date", "category_id"]
+    },
+    {
+      "table_name": "blog_comments",
+      "columns": ["comment_id", "post_id", "customer_id", "comment", "comment_date"]
+    },
+    {
+      "table_name": "event_calendar",
+      "columns": ["event_id", "event_name", "event_date", "event_location", "event_description"]
+    },
+    {
+      "table_name": "customer_feedback",
+      "columns": ["feedback_id", "customer_id", "product_id", "rating", "feedback_text", "feedback_date"]
+    },
+    {
+      "table_name": "alerts",
+      "columns": ["alert_id", "alert_type", "message", "date_created", "status"]
+    },
+    {
+      "table_name": "app_settings",
+      "columns": ["setting_id", "setting_key", "setting_value", "created_at"]
+    },
+    {
+      "table_name": "contact_us",
+      "columns": ["contact_id", "name", "email", "message", "date_received"]
+    }
+  ]
+  
