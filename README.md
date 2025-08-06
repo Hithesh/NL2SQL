@@ -41,7 +41,7 @@ project-root/
 ├── README.md
 ```
 
-## 📥 Installation & Setup
+##  Installation & Setup
 
 ### 1. Clone the repository:
 
@@ -100,7 +100,7 @@ POST to `http://localhost:8000/retrieve-tables/` with:
 }
 ```
 
-## 📁 schema.json (Sample)
+##  schema.json (Sample)
 
 ```json
 [
@@ -130,26 +130,19 @@ sentence-transformers
 qdrant-client
 ```
 
-## 🧐 AI Model Used
+##  AI Model Used
 
 * `all-MiniLM-L6-v2` by Sentence Transformers (open-source, no API key needed)
 
-## 🔐 CORS Enabled for Frontend Integration
 
-* Cross-origin requests are allowed from any origin for simplicity.
 
-## 🧪 Testing
-
-* Use Postman or any REST client to test the `/retrieve-tables/` POST route.
-* The React frontend is optional but helpful for testing.
-
-## 📅 Troubleshooting
+##  Troubleshooting
 
 * Make sure Docker is running
 * Ensure `schema.json` is located inside the backend folder
 * If Qdrant is not connecting, check port 6333 is open
 * Use `docker logs backend` to debug FastAPI container
 
-## 📄 License
+##  License
 
 This project is open-source and free to use for educational and demo purposes.
